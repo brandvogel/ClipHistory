@@ -1,6 +1,6 @@
 # ClipHistory
 
-A lightweight macOS menu bar app that remembers your recent clipboard entries so you can paste something you copied a few items ago. macOS only keeps the *most recent* clipboard item natively — ClipHistory quietly records the last 15 text copies and lets you put any of them back with a click. Note: this was vibe-coded. More info and my stance on AI can be found further down.
+A lightweight macOS menu bar app that remembers your recent clipboard entries so you can paste something you copied a few items ago. macOS only keeps the *most recent* clipboard item natively — ClipHistory quietly records the last 15 text copies and lets you put any of them back with a click. *Note: this was vibe-coded. More info and my stance on AI can be found further down.*
 
 ## Features
 

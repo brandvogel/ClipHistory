@@ -1,5 +1,8 @@
 #!/bin/bash
 # build.sh — compile ClipHistory into a runnable .app bundle without Xcode.
+#
+# Author: brandvogel
+#
 # Requires the Swift toolchain (comes with Xcode or the Command Line Tools:
 #   xcode-select --install).
 #
@@ -10,6 +13,10 @@
 # Result: ./ClipHistory.app  — double-click it, or `open ClipHistory.app`.
 
 set -euo pipefail
+
+# Resolve to this script's own directory so it works no matter where it's
+# invoked from (a common gotcha after moving the folder).
+cd "$(dirname "$0")"
 
 APP="ClipHistory.app"
 CONTENTS="$APP/Contents"

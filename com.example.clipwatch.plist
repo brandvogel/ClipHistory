@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  com.example.clipwatch.plist — auto-starts clip-watch.js at login.
+
+  Before installing, adjust two paths below to match your machine:
+    1. The <string> under ProgramArguments[0] must be the FULL path to `node`.
+       Find it with:  which node
+       Common values: /usr/local/bin/node, /opt/homebrew/bin/node,
+       or an nvm path like /Users/you/.nvm/versions/node/vX/bin/node
+    2. ProgramArguments[1] must be the full path to clip-watch.js
+       (this template assumes ~/bin/clip-watch.js — expand ~ to your home).
+-->
+<plist version="1.0">
+<dict>
+    <key>Label</key>
+    <string>com.example.clipwatch</string>
+
+    <key>ProgramArguments</key>
+    <array>
+        <string>/usr/local/bin/node</string>
+        <string>/Users/YOUR_USERNAME/bin/clip-watch.js</string>
+    </array>
+
+    <key>RunAtLoad</key>
+    <true/>
+
+    <key>KeepAlive</key>
+    <true/>
+
+    <key>StandardOutPath</key>
+    <string>/tmp/clipwatch.out.log</string>
+    <key>StandardErrorPath</key>
+    <string>/tmp/clipwatch.err.log</string>
+</dict>
+</plist>

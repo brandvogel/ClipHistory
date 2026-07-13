@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Info.plist for ClipHistory.
+
+  LSUIElement = true  →  runs as a menu bar "agent": no Dock icon,
+  no app-switcher entry, no window on launch. This is what makes it
+  feel like a proper menu bar utility.
+-->
+<plist version="1.0">
+<dict>
+    <key>CFBundleName</key>
+    <string>ClipHistory</string>
+    <key>CFBundleDisplayName</key>
+    <string>ClipHistory</string>
+    <key>CFBundleIdentifier</key>
+    <string>com.example.cliphistory</string>
+    <key>CFBundleVersion</key>
+    <string>1</string>
+    <key>CFBundleShortVersionString</key>
+    <string>1.0</string>
+    <key>CFBundlePackageType</key>
+    <string>APPL</string>
+    <key>CFBundleExecutable</key>
+    <string>ClipHistory</string>
+    <key>LSMinimumSystemVersion</key>
+    <string>13.0</string>
+    <key>LSUIElement</key>
+    <true/>
+    <key>NSHumanReadableCopyright</key>
+    <string>ClipHistory</string>
+</dict>
+</plist>

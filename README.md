@@ -18,11 +18,42 @@ A lightweight macOS menu bar app that remembers your recent clipboard entries so
 - Apple's Swift toolchain — the Command Line Tools are enough:
   ```bash
   xcode-select --install
+  ```
+  (Full Xcode is **not** required.)
 
 ## Build
 
-Run the below commands in the repo to build the app.
-```cd ClipHistory
+```bash
+cd ClipHistory
 chmod +x build.sh
 ./build.sh
-open ClipHistory.app```
+open ClipHistory.app
+```
+
+`build.sh` compiles the sources with `swiftc`, assembles a `.app` bundle, and applies an ad-hoc code signature so it runs locally.
+
+On first launch, if Gatekeeper blocks the unsigned app: right-click `ClipHistory.app` → **Open**, or go to **System Settings → Privacy & Security → Open Anyway**.
+
+The app has no Dock icon or window by design — look for the clipboard icon in your **menu bar** (top-right). If your menu bar is crowded, ⌘-drag icons to reveal it.
+
+## Run at login
+
+**System Settings → General → Login Items → +**, then add `ClipHistory.app`.
+
+## How it works
+
+macOS has no clipboard-change notification, so ClipHistory polls `NSPasteboard`'s cheap `changeCount` twice a second. When it changes, the new text is prepended to the history (deduped, capped at 15) and saved to `~/.clip_history.json`.
+
+## Privacy & security
+
+- Everything stays **local**. Nothing is sent anywhere.
+- History is stored **unencrypted** in `~/.clip_history.json`. Anything you copy — including passwords or tokens — can land there. Use **Clear History** after copying secrets, and be aware of this if you sync your home folder.
+- Text only; images and files are ignored.
+
+## Acknowledgements
+
+The initial implementation of this project was developed with the assistance of Claude, an AI assistant by Anthropic (Anthropic, 2026). All code was reviewed and tested by the author before release.
+
+## References
+
+Anthropic. (2026). *Claude* (Opus 4.6) [Large language model]. https://www.anthropic.com

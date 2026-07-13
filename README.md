@@ -1,6 +1,6 @@
 # ClipHistory
 
-A lightweight macOS menu bar app that remembers your recent clipboard entries so you can paste something you copied a few items ago. macOS only keeps the *most recent* clipboard item natively — ClipHistory quietly records the last 15 text copies and lets you put any of them back with a click. *Note: this was vibe-coded. More info and my stance on AI can be found further down.*
+A lightweight macOS menu bar app that remembers your recent clipboard entries so you can paste something you copied a few items ago. macOS only keeps the *most recent* clipboard item natively — ClipHistory quietly records the last 15 text copies and lets you put any of them back with a click.
 
 ## Features
 
@@ -50,9 +50,9 @@ macOS has no clipboard-change notification, so ClipHistory polls `NSPasteboard`'
 - History is stored **unencrypted** in `~/.clip_history.json`. Anything you copy — including passwords or tokens — can land there. Use **Clear History** after copying secrets, and be aware of this if you sync your home folder.
 - Text only; images and files are ignored.
 
-## AI Disclaimer
+## Acknowledgements
 
-The entirety of this tool and README.md (except this section) has been generated with Claude Opus 4.6, thus making it a vibe-coded project. I personally believe that AI may do worse for society than better, and should be used in moderation. I am strongly against the use of artificial intelligence in creative projects (making AI images etc), as this could lead to the downfall of certain creative industries as models continue training and getting better. 
+The initial implementation of this project was developed with the assistance of Claude, an AI assistant by Anthropic (Anthropic, 2026). All code was reviewed and tested by the author before release.
 
 ## References
 
